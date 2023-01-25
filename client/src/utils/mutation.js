@@ -8,7 +8,7 @@ mutation Mutation($bookData: bookData!) {
       email
       password
       savedBooks {
-        [Book]
+        []
       }
     }
   }
