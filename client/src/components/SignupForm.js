@@ -31,34 +31,34 @@ const SignupForm = () => {
       event.stopPropagation();
     }
 
-    try {
-      const response = await CREATE_USER(userFormData);
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
-
-      const { token, user } = await response.json();
-      console.log(user);
-      Auth.login(token);
-    } catch (err) {
-      console.error(err);
-      setShowAlert(true);
-    }
-
     // try {
-    //   const { data } = await CREATE_USER({
-    //     variables: { ...userFormData },
-    //   });
+    //   const response = await CREATE_USER(userFormData);
 
-    //   console.log({data})
+    //   if (!response.ok) {
+    //     throw new Error('something went wrong!');
+    //   }
 
-    //   Auth.login(data.CREATE_USER.token)
-
+    //   const { token, user } = await response.json();
+    //   console.log(user);
+    //   Auth.login(token);
     // } catch (err) {
     //   console.error(err);
     //   setShowAlert(true);
     // }
+
+    try {
+      const { data } = await CREATE_USER({
+        variables: { ...userFormData },
+      });
+
+      console.log({data})
+
+      Auth.login(data.CREATE_USER.token)
+
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
+    }
 
     setUserFormData({
       username: '',

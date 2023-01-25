@@ -8,7 +8,13 @@ mutation Mutation($bookData: bookData!) {
       email
       password
       savedBooks {
-        []
+        _id
+        authors
+        description
+        bookId
+        image
+        link
+        title
       }
     }
   }
