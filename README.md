@@ -4,11 +4,7 @@
 
 ## Description
 
-This application is a web based text editor which offers offline persistence of functionality and content as well as local installation via the progressive web app framework. The application utilizes an integrated service worker and Cache API to ensure the aforementioned functionality. 
-
-For a link to the apps relevant GitHub repository, see the following: https://github.com/JamesJPorter/Challenge-19-PWA
-
-The Application has been deployed to Heroku and can be found at the following URL: 
+This application is a convenient book searching and bookmarking tool. Using it you can search and save books to your profile, keeping track of books you may wish to read, have read or which you may generally wish to not forget. The app allows a user to signup in order to save their list of books and utilizes a MERN stack structure with Apollo server and graphQL architecture. The current version of the application is the result of a refactor from a restful API structure. 
 
 ## Table of Contents
 
@@ -19,31 +15,20 @@ The Application has been deployed to Heroku and can be found at the following UR
 
 ## Installation
 
-* This application utilizes an indexDb for the storing of user data. 
+* Users will need to download code from the GitHub Repo and open the code in their local environment (such as VSCode). 
 
-* Any user of the application will need to download code from the GitHub Repo and open the code in their local environment (such as VSCode). 
-
-* Once the code is loaded in your local environemnt, open your terminal and navigate into the root directory. Once there, enter "npm install -y". This command will install all node package dependencies including but not limited too: 
-    - - Express.js
-    - - webpack
-    - - Babel
-    - - CSS-loader 
-    - - concurrently 
-    - - IndexedDB      
+* Once the code is loaded in your local environemnt, open your terminal and navigate into the root directory. Once there, enter "npm install". This command will install all node package dependencies for both your server and client directories.  
 
 ## Usage
 
-Utilizing the app includes initializing and building the app via the invocation of "npm run start". Utilizing this command will build the application and start your server.
+Utilizing the app includes initializing and building the app via the invocation of "npm run build". Utilizing this command will build the application and start your server.
 
-Once the app has been started, open your web browser and navigate to localhost:3000. This page should load the text editor and appear just like the following: 
+Once the app has been started, open your web browser and navigate to localhost:3000. This page should load the app automatically, presenting you with a landing page which includes a search bar and title across its top. 
 
-![Text Editor Landing Page](/Assets/Text-Editor-landing-page.png)
+![Text Editor Landing Page](/Assets/app-screenshot.png)
 
-Once you have arrived at the above page, you may utilize the text editor however you see fit. You will notice that you can enter content into the editor, close it / navigate away from it and reopen it and all of your content persist. 
+The above screenshot is the result of a search for "eragon". The results include all books in Christopher Paolini's Inheritance triology and some associated media. 
 
-The same stand true for the text editors other feature, that being the option to install the application as a progressive web app. Utilizing the install button in the top left of the application you will be able to instal a dektop version of the app.
-
-This version will maintain all previously entered content as well!
  
 ## License
 
