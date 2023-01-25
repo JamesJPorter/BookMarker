@@ -50,10 +50,10 @@ const resolvers = {
               return { token, User };
         },
         createUser: async (parent, args) => {
-            const User = await User.create();
-            const token = signToken(User);
+            const user = await User.create(args);
+            const token = signToken(user);
 
-            return { token, User };
+            return { token, user };
         }
     }
 }
